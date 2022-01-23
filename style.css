@@ -1,0 +1,261 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* margin and padding 0 below eliminates any extra space on the left and right of the page */
+  /* We always use the below to start a project from scratch */
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  min-height: 100vh;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+h3 {
+  text-transform: uppercase;
+  color: orangered;
+}
+button {
+  background: orangered;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  float: right;
+  box-shadow: -5px 5px 5px rgba(223, 217, 217, 0.438);
+}
+.card {
+  background: rgb(216, 213, 213);
+  /* min-width: 350px; */
+  margin: 10px;
+  min-height: 350px;
+  padding-bottom: 20px;
+  /* For box shadow effect "-" is for the y-axis and "+" is for the x-axis */
+  box-shadow: -5px 5px 5px rgba(109, 101, 101, 0.425);
+}
+
+/* global-msg */
+.global-msg {
+  background: rgb(73, 73, 99);
+  color: white;
+  padding: 10px 0;
+}
+/* .top-msg can also be used instead of the below */
+.global-msg .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icons i {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+/* Header */
+.header {
+  background: pink;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+}
+.menu ul {
+  list-style-type: none;
+  display: flex;
+}
+.menu ul li {
+  margin-left: 16px;
+  cursor: pointer;
+}
+.menu ul li:hover {
+  color: blue;
+}
+.logo {
+  font-family: "Lobster", cursive;
+}
+.menu i {
+  display: none;
+}
+
+/* Hero */
+.hero {
+  min-height: 80vh;
+  background: url(./assets/hero.jpg) no-repeat center center;
+  /* The relative path of the file always needs to be defined as in line 65
+  If we don't the image won't won't work when the website is deployed*/
+  /* background-repeat: no-repeat; */
+  /* Line 66 can also be written in addition to line 65 to not have the image repeat*/
+  /* Line 65 is a short hand for the code in line 66 */
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-content {
+  background: black;
+  opacity: 0.7;
+  color: wheat;
+  padding: 10px 30px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 5px greenyellow;
+}
+
+/* Latest post */
+
+.latest-section {
+  margin-top: 60px;
+}
+
+.latest-content {
+  display: flex;
+  flex-direction: row;
+}
+.latest {
+  width: 70%;
+}
+.latest article {
+  margin-top: 70px;
+}
+
+.post-content {
+  display: flex;
+  flex-direction: row;
+}
+.post-content img {
+  width: 180px;
+  border: 3px solid rgba(231, 218, 218, 0.425);
+  border-radius: 5px;
+  box-shadow: -10px 10px 15px 5px rgba(109, 101, 101, 0.425);
+}
+.info {
+  margin: 0 20px;
+}
+date {
+  background: rgba(128, 0, 128, 0.452);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 10px;
+}
+/* Aside */
+.links {
+  background: rgba(255, 166, 0, 0.3);
+  width: 30%;
+  border-radius: 5px;
+  padding: 32px 16px;
+}
+.by-country {
+  margin-top: 64px;
+}
+/* Rec section */
+.rec {
+  margin-top: 64px;
+}
+.rec-content {
+  display: flex;
+  flex-direction: row;
+}
+.rec-content img {
+  width: 100%;
+}
+
+/* Subscribe section */
+.subscribe {
+  background: rgb(190, 169, 162);
+  margin: 64px auto;
+  min-height: 200px;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 32px;
+}
+.subscribe input {
+  padding: 10px;
+  border: none;
+  line-height: 20px;
+}
+[type="submit"] {
+  background: orangered;
+  border-radius: 5px;
+}
+
+/* Footer section */
+.footer {
+  background: rgb(14, 14, 14);
+  padding: 64px 0;
+  color: whitesmoke;
+  text-align: center;
+}
+
+/* BELOW IS CSS BREAK POINTS */
+/* HERE WE USUALLY WRITE THE BIGGEST SCREEN FIRST, THEN THE MIDDLE AND SMALLEST AT THE END */
+/* IF WE DON'T THE CODE AT THE END WILL OVERRIDE THE CODE ABOVE */
+
+/* Media Queries - code below is for the ipad view */
+@media (max-width: 768px) {
+  .menu {
+    height: 62px;
+  }
+  .menu i {
+    display: block;
+  }
+  .menu ul {
+    display: none;
+  }
+  /* Check in debugging why we did this and what it does */
+  .latest-content {
+    display: flex;
+    flex-direction: column;
+  }
+  /* Check in debugging why we did this and what it does */
+  .latest {
+    width: 100%;
+  }
+  /* Check in debugging why we did this and what it does */
+  .links {
+    width: 100%;
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+  }
+  /* Check in debugging why we did this and what it does */
+  .by-country {
+    margin-top: 0;
+  }
+  .rec-content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+/* Media Queries - code below is for the mobile view */
+@media (max-width: 576px) {
+  .post-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .post-content img {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+  .latest article {
+    margin-top: 115px;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+  }
+  .subscribe form {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+  }
+  .subscribe form input {
+    margin-bottom: 16px;
+  }
+}
