@@ -74,6 +74,10 @@ button {
   margin-left: 16px;
   cursor: pointer;
 }
+a[href] {
+  text-decoration: none;
+  color: black;
+}
 .menu ul li:hover {
   color: blue;
 }
