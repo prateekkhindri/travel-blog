@@ -3,8 +3,6 @@
 }
 
 body {
-  /* margin and padding 0 below eliminates any extra space on the left and right of the page */
-  /* We always use the below to start a project from scratch */
   margin: 0;
   padding: 0;
 }
@@ -35,7 +33,6 @@ button {
   margin: 10px;
   min-height: 350px;
   padding-bottom: 20px;
-  /* For box shadow effect "-" is for the y-axis and "+" is for the x-axis */
   box-shadow: -5px 5px 5px rgba(109, 101, 101, 0.425);
 }
 
@@ -92,11 +89,6 @@ a[href] {
 .hero {
   min-height: 80vh;
   background: url(./assets/hero.jpg) no-repeat center center;
-  /* The relative path of the file always needs to be defined as in line 65
-  If we don't the image won't won't work when the website is deployed*/
-  /* background-repeat: no-repeat; */
-  /* Line 66 can also be written in addition to line 65 to not have the image repeat*/
-  /* Line 65 is a short hand for the code in line 66 */
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -197,9 +189,7 @@ date {
   text-align: center;
 }
 
-/* BELOW IS CSS BREAK POINTS */
-/* HERE WE USUALLY WRITE THE BIGGEST SCREEN FIRST, THEN THE MIDDLE AND SMALLEST AT THE END */
-/* IF WE DON'T THE CODE AT THE END WILL OVERRIDE THE CODE ABOVE */
+/* CSS BREAK POINTS */
 
 /* Media Queries - code below is for the ipad view */
 @media (max-width: 768px) {
@@ -212,23 +202,23 @@ date {
   .menu ul {
     display: none;
   }
-  /* Check in debugging why we did this and what it does */
+
   .latest-content {
     display: flex;
     flex-direction: column;
   }
-  /* Check in debugging why we did this and what it does */
+
   .latest {
     width: 100%;
   }
-  /* Check in debugging why we did this and what it does */
+
   .links {
     width: 100%;
     margin-top: 48px;
     display: flex;
     justify-content: space-between;
   }
-  /* Check in debugging why we did this and what it does */
+
   .by-country {
     margin-top: 0;
   }
